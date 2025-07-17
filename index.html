@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>❤️ Для тебя</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       padding: 0;
@@ -15,8 +19,9 @@
       justify-content: center;
     }
     .card {
-      width: 300px;
-      height: 200px;
+      width: 90vw;
+      max-width: 340px;
+      aspect-ratio: 3 / 2;
       perspective: 1000px;
       cursor: pointer;
     }
@@ -42,6 +47,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 20px;
     }
     .card-front {
       background: #fff;
@@ -49,8 +55,13 @@
     .card-back {
       background: #ffe0e9;
       transform: rotateY(180deg);
-      padding: 20px;
       text-align: center;
+    }
+    h1, h2 {
+      margin: 0 0 10px;
+    }
+    p {
+      margin: 5px 0;
     }
   </style>
 </head>
@@ -59,7 +70,7 @@
     <div class="card-inner">
       <div class="card-front">
         <h1>❤️</h1>
-        <p>Нажми меня</p>
+        <p>Нажми</p>
       </div>
       <div class="card-back">
         <h2>С любовью</h2>
